@@ -57,23 +57,28 @@ class DataWarehouse:
                     result.append((user_id, user_data))
         return result
 
-# Example Usage
-warehouse = DataWarehouse()
 
-# Step One: Generate User Data
-warehouse.generate_user_data()
 
-# Step Two: Create Key/Value Pairs
-warehouse.create_key_value_pairs()
+def main():
+    # Example Usage
+    warehouse = DataWarehouse()
 
-# Step Three: Search for users in a certain state (address)
-state_search_result = warehouse.search_users('address', '500 Maple St, Springfield, IL')  # Change the street name, city, and state as needed
-print("Users in a certain state:")
-for user_id, user_data in state_search_result:
-    print(f"{user_id}: {user_data}")
+    # Step One: Generate User Data
+    warehouse.generate_user_data()
 
-# Search for users handled by a certain salesperson
-salesperson_search_result = warehouse.search_users('salesperson', 'SalesID-Bob')  # Change the salesperson as needed
-print("\nUsers handled by a certain salesperson:")
-for user_id, user_data in salesperson_search_result:
-    print(f"{user_id}: {user_data}")
+    # Step Two: Create Key/Value Pairs
+    warehouse.create_key_value_pairs()
+
+    # Step Three: Search for users in a certain state (address)
+    state_search_result = warehouse.search_users('address', '500 Maple St, Springfield, IL')  # Change the street name, city, and state as needed
+    print("Users in a certain state:")
+    for user_id, user_data in state_search_result:
+        print(f"{user_id}: {user_data}")
+
+    # Search for users handled by a certain salesperson
+    salesperson_search_result = warehouse.search_users('salesperson', 'SalesID-Bob')  # Change the salesperson as needed
+    print("\nUsers handled by a certain salesperson:")
+    for user_id, user_data in salesperson_search_result:
+        print(f"{user_id}: {user_data}")
+
+main()
