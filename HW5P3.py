@@ -1,3 +1,8 @@
+'''
+Homework 5 Part 1 - coding
+Maher Harkati
+Problem 3 - Password Simulator
+'''
 import random
 import string
 

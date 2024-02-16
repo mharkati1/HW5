@@ -1,3 +1,8 @@
+'''
+Homework 5 Part 1 - coding
+Maher Harkati
+Problem 2 - Treasure Chest 
+'''
 import random
 
 class PirateTreasureGame:
